@@ -7,11 +7,15 @@
 :root{
     --navy: #0A2947;
     --cream: #F3E4C9;
+    --orange: #FF9100;
+    --babyblue: #EEEEEE;
 }
 
 body {
     background-color: var(--cream)
 }
+
+/* Logo */
 #Logo {
     background-color: var(--cream);
 }
@@ -21,6 +25,8 @@ body {
 #Logo p {
     color: grey;
 }
+
+/* Navigasi */
 #Navigasi {
     background-color: var(--cream);
     list-style: none;
@@ -34,4 +40,9 @@ a {
     padding: 3%;
     display: flex;
     text-decoration: none;
+}
+
+/* Langkah Melapor */
+#Langkah-Cara-Melapor-dan-Button {
+    background-color: var(--cream);
 }
