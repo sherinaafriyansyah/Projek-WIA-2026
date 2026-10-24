@@ -27,24 +27,61 @@
 
         <!-- Hero Section -->
         <section id="Hero-Section">
-           <p class="hero-tagline">
-            TRANSPARANSI UNTUK DAERAH 3T
-           </p> 
-
-           <h1 class="hero-title">
-            Transparansi & Pelaporan <br />
-            Sarana Pendidikan <span class="highlight"></span> 3T</span>
-           </h1>
-
-           <p class="hero-description">
-            Pantau alokasi anggaran dan laporkan kondisi sekolah <br />
-            demi pendidikan yang merata hingga pelosok negeri
-           p>
-           
-           <div id="carousel" class="carousel-container">
-            <div id="slider-track"></div>
-            <div>
-
+            <p class="eyebrow">Transparansi untuk daerah 3T</p>
+      <h1>Transparansi &amp; Pelaporan Sarana Pendidikan <span>3T</span></h1>
+      <p class="lead">Pantau alokasi anggaran dan laporkan kondisi sekolah demi pendidikan yang merata hingga pelosok negeri.</p>
+ 
+      <div class="carousel" aria-label="Galeri kegiatan sekolah">
+        <div class="slide active">
+          <img class="foto" src="Kegiatan Belajar Mengajar di pelosok.jpg" alt="Kegiatan Belajar">
+          <div class="loc"><img src="pin.svg" alt="">Kab. Alor, NTT</div>
+          <div class="caption">Kegiatan belajar di sekolah pelosok</div>
+        </div>
+        <div class="slide">
+          <img class="foto" src="Ruang kelas yang perlu perbaikan.jpg" alt="Ruang kelas yang perlu perbaikan">
+          <div class="loc"><img src="pin.svg" alt="">Kab. Asmat, Papua</div>
+          <div class="caption">Ruang kelas yang perlu perbaikan</div>
+        </div>
+        <div class="slide">
+          <img class="foto" src="" alt="Perjalanan siswa menuju sekolah">
+          <div class="loc"><img src="pin.svg" alt="">Kab. Natuna, Kepri</div>
+          <div class="caption">Perjalanan siswa menuju sekolah</div>
+        </div>
+        <button class="next" id="next" aria-label="Foto berikutnya">
+          <img src="pana-kecil.svg" alt="Tombol berikutnya">
+        </button>
+      </div>
+      <div class="dots" id="dots"></div>
+ 
+      <button class="cta" id="report">
+        <img src="peringatan.svg" alt="Laporkan">
+        <span class="grow">Laporkan Kerusakan</span>
+        <img src="panah-besar.svg" alt="Tombol Panah">
+      </button>
+ 
+      <div class="stats">
+        <div class="stat"><b data-count="1284">0</b><small>Laporan masuk</small></div>
+        <div class="stat"><b data-count="72" data-suffix="%">0</b><small>Ditindaklanjuti</small></div>
+        <div class="stat"><b data-count="38">0</b><small>Kabupaten 3T</small></div>
+      </div>
+    </section>
+  </header>
+ 
+  <!-- Formulir laporan -->
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="ttl">
+    <div class="sheet">
+      <h2 id="ttl">Laporkan kerusakan sekolah</h2>
+      <label for="school">Nama sekolah</label>
+      <input id="school" placeholder="Contoh: SDN 1 Alor Barat">
+      <label for="desc">Kondisi kerusakan</label>
+      <textarea id="desc" rows="3" placeholder="Jelaskan kerusakan yang terjadi"></textarea>
+      <div class="row">
+        <button class="btn-cancel" id="cancel">Batal</button>
+        <button class="btn-send" id="send">Kirim laporan</button>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast">Laporan terkirim</div>
         </section>
     </header>
 
@@ -53,18 +90,65 @@
         <section id="Data Anggaran">
 
         </section>
-
-        <!-- Langkah-Cara-Melapor&Button -->
-        <section id="Langkah-Cara-Melapor&Button">
+        
+             <!-- Langkah-Cara-Melapor&Button -->
+        <section id="#Langkah-Cara-Melapor-dan-Button">
             <div class="Text-Pengantar">
                 <h6>MUDAH & TERPANTAU</h6>
-                <p>Empat langkah untuk perubahan</p>
-                <h6>Suara Anda membantu pemerintah melihat kondisi nyata di lapangan.</h6>
-            </div>
-            <div class="Langkah-melapor">
-                
+                <h2>Empat langkah untuk perubahan</h2>
+                <p class="deskripsi">Suara Anda membantu pemerintah melihat kondisi nyata di lapangan.</p>
             </div>
 
+            <div id="Alur">
+                <!-- Step 1 -->
+                <div class="step">
+                    <div class="nomor">1</div>
+                    <div class="card">
+                        <div>
+                            <h2>Amati & Bandingkan</h2>
+                            <p>Lihat data anggaran dan kondisi sekolah.</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="step">
+                    <div class="nomor">2</div>
+                    <div class="card">
+                        <div>
+                            <h2>Tulis Laporan</h2>
+                            <p>Laporan laporan jika keadaan nyata tidak sesuai dengan data anggaran dan lampirkan bukti.</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="step">
+                    <div class="nomor">3</div>
+                    <div class="card">
+                        <div>
+                            <h2>Kirim Laporan</h2>
+                            <p>Klik Buton "Kirim Laporan" agar laporan anda benar-benar sampai.</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                 <div class="step">
+                    <div class="nomor">4</div>
+                    <div class="card">
+                        <div>
+                            <h2>Pantau Progres</h2>
+                            <p>Gunakan kode laporan yang telah didapat setelah selesai melapor untuk melihat status laporan anda.</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+
+
+            </div>
+
+    
         </section>
     </main>
 
