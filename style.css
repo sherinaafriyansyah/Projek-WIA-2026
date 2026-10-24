@@ -34,8 +34,10 @@ h4 span {
 
 /* Navigasi */
 #Navigasi {
-    background-color: white;
-     margin: 20px;
+    margin: 0%;
+    position: static;
+    z-index: 1000;
+    width: 100%;
 }
 ul {
     padding: 1%;
@@ -45,28 +47,37 @@ ul {
     font-weight: bolder;
     font-size: larger;
     justify-content: center;
+     position: sticky;
 
 }
-a {
+#Navigasi a {
     background-color: var(--orange);
     border-radius: 20px;
     text-decoration: none;
     padding: 10px;
     color: white;
     box-shadow: 3px 3px 3px #0b0b0b33;
+    position: sticky;
 }
 
 /* Langkah Melapor */
 #Langkah-Cara-Melapor-dan-Button {
-   
+   margin-top: 20px;
+   padding: 40px;
 }
-h2 {
+.Text-Pengantar h6 {
+    color: var(--orange);
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 3px;
+}
+.Text-Pengantar h2 {
     font-size: clamp(28px, 5vw, 34px);
     font-weight: 500;
     line-height: 1.3;
     margin-bottom: 12px;
+    
 }
-
 .deskripsi {
     color: gray;
     font-size: 17px;
@@ -145,6 +156,7 @@ h2 {
 .tombol {
     margin-top: 30px;
     padding: 10px;
+    margin-left: 70px;
     border: none;
     border-radius: 20px;
     background-color: var(--orange);
@@ -156,7 +168,11 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 24px;
-    box-shadow: 0 12px 25px #ff701433;
+    box-shadow: 10px 10px 12px #0c0c0c33;
+}
+.tombol a {
+    color: white;
+    text-decoration: none;
 }
 .tombol span {
     font-size: 28px;
