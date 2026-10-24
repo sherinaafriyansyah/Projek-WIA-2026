@@ -1,0 +1,37 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    
+}
+
+:root{
+    --navy: #0A2947;
+    --cream: #F3E4C9;
+}
+
+body {
+    background-color: var(--cream)
+}
+#Logo {
+    background-color: var(--cream);
+}
+#Logo h4 {
+    color: var(--navy);
+}
+#Logo p {
+    color: grey;
+}
+#Navigasi {
+    background-color: var(--cream);
+    list-style: none;
+}
+a {
+    background-color: var(--navy);
+    color: var(--cream);
+    font-weight: bolder;
+    border-radius: 90px;
+    opacity: 0.5;
+    padding: 3%;
+    display: flex;
+    text-decoration: none;
+}
