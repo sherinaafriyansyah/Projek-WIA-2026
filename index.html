@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PELITA</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="script-form.js">
 </head>
 
 <body>
-        <!-- Logo -->
+    <!-- Logo -->
     <article id="Navigasi-bar">
             <section id="Logo">
                  <img src="" alt="Logo">
@@ -26,7 +28,7 @@
         </nav>
     </article>
 
-
+    <!-- Header -->
     <header>
         <!-- Hero Section -->
          <section id="Beranda">
@@ -51,7 +53,7 @@
                 <div class="card-slider" id="sliderContainer">
                     <!-- Slide 1 -->
                     <div class="slide-content active">
-                        <img src="Kegiatan belajar mengajar di pelosok.jpg" alt="Akses Pendidikan 3T 1" class="slide-img">
+                        <img src="aset/Kegiatan belajar mengajar di pelosok.jpg" alt="Akses Pendidikan 3T 1" class="slide-img">
                         <div class="slide-overlay">
                             <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Sorong, Papua Barat</p>
                             <h3>Akses pendidikan di wilayah 3T</h3>
@@ -59,15 +61,15 @@
                     </div>
                     <!-- Slide 2 -->
                     <div class="slide-content">
-                        <img src="Ruang kelas yang perlu perbaikan.jpg" alt="Akses Pendidikan 3T 2" class="slide-img">
+                        <img src="aset/Ruang kelas yang perlu perbaikan.jpg" alt="Akses Pendidikan 3T 2" class="slide-img">
                         <div class="slide-overlay">
-                            <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Alor, Nusa Tenggara Timur</p>
+                            <p class="location"><img src="aset/pin.svg" alt="Pin" class="inline-icon"> Kab. Alor, Nusa Tenggara Timur</p>
                             <h3>Kondisi fasilitas sekolah di daerah perbatasan</h3>
                         </div>
                     </div>
                     <!-- Slide 3 -->
                     <div class="slide-content">
-                        <img src="Kegiatan belajar mengajar di sumbar.jpg" alt="Akses Pendidikan 3T 3" class="slide-img">
+                        <img src="aset/Kegiatan belajar mengajar di sumbar.jpg" alt="Akses Pendidikan 3T 3" class="slide-img">
                         <div class="slide-overlay">
                             <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Mentawai, Sumatera Barat</p>
                             <h3>Semangat belajar siswa di pelosok negeri</h3>
@@ -91,10 +93,10 @@
 
                 <!-- Tombol Navigasi Slider Kiri & Kanan -->
                 <button class="btn-slide-prev" id="prevSlide" aria-label="Sebelumnya">
-                    <img src="panah-kecil.svg" alt="Prev" class="arrow-icon prev-flip">
+                    <img src="aset/panah-kecil.svg" alt="Prev" class="arrow-icon prev-flip">
                 </button>
                 <button class="btn-slide-next" id="nextSlide" aria-label="Berikutnya">
-                    <img src="panah-kecil.svg" alt="Next" class="arrow-icon">
+                    <img src="aset/panah-kecil.svg" alt="Next" class="arrow-icon">
                 </button>
             </div>
 
@@ -107,9 +109,9 @@
 
             <!-- CTA Button Utama -->
             <button class="btn-hero-lapor" id="open-lapor-hero">
-                <img src="peringatan.svg" alt="Peringatan" class="btn-icon-svg">
+                <img src="aset/peringatan.svg" alt="Peringatan" class="btn-icon-svg">
                 <span>Laporkan Kerusakan</span>
-                <img src="panah-besar.svg" alt="Panah" class="btn-icon-svg">
+                <img src="aset/panah-besar.svg" alt="Panah" class="btn-icon-svg">
             </button>
 
 
@@ -150,6 +152,7 @@
     </div>
     <div class="toast" id="toast">Laporan terkirim</div>
 
+    <script src="script.js"></script>
 
     <main>
         <!-- Data Anggaran -->
@@ -212,9 +215,84 @@
                 </div>
             </div>
             </article>
-             <button class="tombol"><a href="lapor.html">Mulai Melapor!</a><span>→</span></button>
-            
+            <button class="tombol" id="bukaForm" type="button">
+                 Mulai Melapor!
+                <span>→</span>
+            </button>
         </section>
+
+    <!-- Modal Form Pelaporan -->
+        <div class="overlay-hamparan" id="modalLaporan" hidden>
+
+             <div class="modal">
+                <button class="tutup-modal" id="tutupForm" type="button">
+                    &times;
+                </button>
+                
+                <p class="label-form">FORM PELAPORAN</p>
+                <h2>Laporkan Kerusakan</h2>
+
+                <!-- Form Laporan -->
+                <form id="formLaporan">
+                    <!-- Label Laporan Kerusakan -->
+                    <label for="namaSekolah">Nama sekolah</label>
+                    <input
+                    type="text"
+                    id="namaSekolah"
+                    name="namaSekolah"
+                    placeholder="Contoh: SD Negeri 4 Alor"
+                    required
+                    >
+                    
+                    <!-- Label Jenis Kerusakan -->
+                    <label for="jenisKerusakan">Jenis kerusakan</label>
+                    <select id="jenisKerusakan" name="jenisKerusakan" required>
+                        <option value="">Pilih jenis kerusakan</option>
+                        <option value="Ruang kelas">Ruang kelas</option>
+                        <option value="Toilet">Toilet</option>
+                        <option value="Perpustakaan">Perpustakaan</option>
+                        <option value="Laboratorium">Laboratorium</option>
+                        <option value="Fasilitas lainnya">Fasilitas lainnya</option>
+                    </select>
+                    
+                    <label for="lokasiSekolah">Lokasi sekolah</label>
+                    <input
+                    type="text"
+                    id="lokasiSekolah"
+                    name="lokasiSekolah"
+                    placeholder="Kabupaten, Provinsi"
+                    required
+                    >
+                    
+                    <!-- Label Deskripsi Laporan -->
+                    <label for="deskripsi">Deskripsi singkat</label>
+                    <textarea
+                    id="deskripsi"
+                    name="deskripsi"
+                    placeholder="Ceritakan kondisi sarana yang perlu ditindaklanjuti..."
+                    rows="4"
+                    required>
+                    </textarea>
+                    
+                    <!-- Label Bukti Foto Laporan -->
+                    <label for="fotoBukti" class="upload-foto">
+                        Tambahkan foto sebagai bukti laporan
+                        <span>Disarankan!</span>
+                    </label>
+                    <input
+                    type="file"
+                    id="fotoBukti"
+                    name="fotoBukti"
+                    accept="image/*"
+                    >
+                    
+                <button type="submit" class="kirim-laporan">
+                    Kirim Laporan <span>→</span>
+                </button>
+    </form>
+  </div>
+</div>
+
     </main>
 
 
@@ -234,6 +312,7 @@
 
     </footer>
 
-
+<script src="script.js"></script>
+<script src="script-form.js"></script>
 </body>
 </html>
