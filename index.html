@@ -26,33 +26,109 @@
             </ul>
         </nav>
 
-        <!-- Hero Section -->
-        <section id="Hero-Section">
-           <p class="hero-tagline">
-            TRANSPARANSI UNTUK DAERAH 3T
-           </p> 
+<!-- Hero Section -->
+    <section id="Beranda" class="hero-section">
+        <div class="hero-container">
+            <span class="badge">TRANSPARANSI UNTUK DAERAH 3T</span>
+            <h1 class="hero-title">
+                Transparansi & Pelaporan<br>
+                Sarana Pendidikan <span>3T</span>
+            </h1>
+            <p class="hero-desc">
+                Pantau alokasi anggaran dan laporkan kondisi sekolah demi pendidikan yang merata hingga pelosok negeri.
+            </p>
 
-           <h1 class="hero-title">
-            Transparansi & Pelaporan <br />
-            Sarana Pendidikan <span class="highlight"></span> 3T</span>
-           </h1>
+<!-- Card Slider / Carousel Gambar -->
+            <div class="card-slider-wrapper">
+                <div class="card-slider" id="sliderContainer">
+                    <!-- Slide 1 -->
+                    <div class="slide-content active">
+                        <img src="Kegiatan belajar mengajar di pelosok.jpg" alt="Akses Pendidikan 3T 1" class="slide-img">
+                        <div class="slide-overlay">
+                            <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Sorong, Papua Barat</p>
+                            <h3>Akses pendidikan di wilayah 3T</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="slide-content">
+                        <img src="Ruang kelas yang perlu perbaikan.jpg" alt="Akses Pendidikan 3T 2" class="slide-img">
+                        <div class="slide-overlay">
+                            <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Alor, Nusa Tenggara Timur</p>
+                            <h3>Kondisi fasilitas sekolah di daerah perbatasan</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="slide-content">
+                        <img src="Kegiatan belajar mengajar di sumbar.jpg" alt="Akses Pendidikan 3T 3" class="slide-img">
+                        <div class="slide-overlay">
+                            <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Mentawai, Sumatera Barat</p>
+                            <h3>Semangat belajar siswa di pelosok negeri</h3>
+                        </div>
+                    </div>
+                </div>
 
-           <p class="hero-description">
-            Pantau alokasi anggaran dan laporkan kondisi sekolah <br />
-            demi pendidikan yang merata hingga pelosok negeri
-           p>
-           
-           <div id="carousel" class="carousel-container">
-            <div id="slider-track"></div>
-            <div>
+                <!-- Tombol Navigasi Slider Kiri & Kanan -->
+                <button class="btn-slide-prev" id="prevSlide" aria-label="Sebelumnya">
+                    <img src="panah-kecil.svg" alt="Prev" class="arrow-icon prev-flip">
+                </button>
+                <button class="btn-slide-next" id="nextSlide" aria-label="Berikutnya">
+                    <img src="panah-kecil.svg" alt="Next" class="arrow-icon">
+                </button>
+            </div>
 
-        </section>
-    </header>
+            <!-- Dots Indicator -->
+            <div class="slider-dots" id="sliderDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+
+            <!-- CTA Button Utama -->
+            <button class="btn-hero-lapor" id="open-lapor-hero">
+                <img src="peringatan.svg" alt="Peringatan" class="btn-icon-svg">
+                <span>Laporkan Kerusakan</span>
+                <img src="panah-besar.svg" alt="Panah" class="btn-icon-svg">
+            </button>
+
+            <!-- Statistik -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h4>1.284</h4>
+                    <p>Laporan masuk</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h4>72%</h4>
+                    <p>Ditindaklanjuti</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h4>38</h4>
+                    <p>Kabupaten 3T</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulir Laporan (Modal Overlay) -->
+    <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="ttl">
+        <div class="sheet">
+            <h2 id="ttl">Laporkan kerusakan sekolah</h2>
+            <label for="school">Nama sekolah</label>
+            <input id="school" placeholder="Contoh: SDN 1 Alor Barat">
+            <label for="desc">Kondisi kerusakan</label>
+            <textarea id="desc" rows="3" placeholder="Jelaskan kerusakan yang terjadi"></textarea>
+            <div class="row">
+                <button class="btn-cancel" id="cancel">Batal</button>
+                <button class="btn-send" id="send">Kirim laporan</button>
+            </div>
+        </div>
+    </div>
+    <div class="toast" id="toast">Laporan terkirim</div>
 
     <main>
         <!-- Data Anggaran -->
-        <section id="Data Anggaran">
-
+        <section id="Data-Anggaran">
         </section>
 
         <!-- Langkah-Cara-Melapor&Button -->
@@ -112,6 +188,56 @@
 
             </div>
 
+            <div id="Alur">
+                <!-- Step 1 -->
+                <div class="step">
+                    <div class="nomor">1</div>
+                    <div class="card">
+                        <div>
+                            <h2>Amati & Bandingkan</h2>
+                            <p>Lihat data anggaran dan kondisi sekolah.</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="step">
+                    <div class="nomor">2</div>
+                    <div class="card">
+                        <div>
+                            <h2>Tulis Laporan</h2>
+                            <p>Laporan laporan jika keadaan nyata tidak sesuai dengan data anggaran dan lampirkan bukti.</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="step">
+                    <div class="nomor">3</div>
+                    <div class="card">
+                        <div>
+                            <h2>Kirim Laporan</h2>
+                            <p>Klik Buton "Kirim Laporan" agar laporan anda benar-benar sampai.</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                 <div class="step">
+                    <div class="nomor">4</div>
+                    <div class="card">
+                        <div>
+                            <h2>Pantau Progres</h2>
+                            <p>Gunakan kode laporan yang telah didapat setelah selesai melapor untuk melihat status laporan anda.</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+
+
+            </div>
+            <script src="script.js"></script>
+    
         </section>
     </main>
 
