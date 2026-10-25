@@ -16,8 +16,6 @@ body {
 
 /* Logo */
 #Logo {
-  background-color: white;
-  padding-top: 20px;
   padding-left: 15px;
   display: flex;
   gap: 20px;
@@ -30,16 +28,23 @@ h4 span {
   color: grey;
   font-size: medium;
 }
-
+.border {
+  border: 1px solid gray;
+  width: 101%;
+}
 /* Navigasi */
-#Navigasi {
+#Navigasi-bar {
+  background-color: var(--babyblue);
+  width: 99%;
   margin: 0%;
-  position: static;
+  position: sticky;
+  top: 0%;
   z-index: 1000;
-  width: 100%;
+  padding: 1%;
+  padding-left: 0%;
 }
 ul {
-  padding: 1%;
+  padding-top: 6px;
   display: flex;
   gap: 10%;
   list-style: none;
@@ -48,14 +53,14 @@ ul {
   justify-content: center;
   position: sticky;
 }
-#Navigasi a {
+#Navigasi-bar a {
   background-color: var(--orange);
   border-radius: 20px;
   text-decoration: none;
-  padding: 10px;
+  padding: 3px 13px 3px 13px;
   color: white;
   box-shadow: 3px 3px 3px #0b0b0b33;
-  position: sticky;
+ 
 }
 
 /*Hero Section*/
@@ -256,8 +261,20 @@ ul {
 
 /* Langkah Melapor */
 #Langkah-Cara-Melapor-dan-Button {
-  margin-top: 20px;
-  padding: 40px;
+  display: flex;
+  flex-direction: column;     /* Menyusun konten dari atas ke bawah */
+  justify-content: center;    /* MENGENTAHKAN SECARA VERTIKAL */
+  align-items: center;        /* Mengentahkan secara horizontal (opsional) */
+  
+  min-height: 100vh;          /* WAJIB: Berikan tinggi minimal pada section */
+  text-align: center;
+}
+.Cara-Melapor {
+  background-color: var(--babyblue);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  width: 60%;
 }
 .Text-Pengantar h6 {
   color: var(--orange);
@@ -279,9 +296,7 @@ ul {
 }
 /* Wadah seluruh langkah */
 #Alur {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  padding-left: 24%;
 }
 .step {
   display: grid;
