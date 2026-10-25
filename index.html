@@ -25,72 +25,110 @@
             </ul>
         </nav>
 
-        <!-- Hero Section -->
-        <section id="Hero-Section">
-            <p class="eyebrow">Transparansi untuk daerah 3T</p>
-      <h1>Transparansi &amp; Pelaporan Sarana Pendidikan <span>3T</span></h1>
-      <p class="lead">Pantau alokasi anggaran dan laporkan kondisi sekolah demi pendidikan yang merata hingga pelosok negeri.</p>
- 
-      <div class="carousel" aria-label="Galeri kegiatan sekolah">
-        <div class="slide active">
-          <img class="foto" src="Kegiatan Belajar Mengajar di pelosok.jpg" alt="Kegiatan Belajar">
-          <div class="loc"><img src="pin.svg" alt="">Kab. Alor, NTT</div>
-          <div class="caption">Kegiatan belajar di sekolah pelosok</div>
+<!-- Hero Section -->
+    <section id="Beranda" class="hero-section">
+        <div class="hero-container">
+            <span class="badge">TRANSPARANSI UNTUK DAERAH 3T</span>
+            <h1 class="hero-title">
+                Transparansi & Pelaporan<br>
+                Sarana Pendidikan <span>3T</span>
+            </h1>
+            <p class="hero-desc">
+                Pantau alokasi anggaran dan laporkan kondisi sekolah demi pendidikan yang merata hingga pelosok negeri.
+            </p>
+
+<!-- Card Slider / Carousel Gambar -->
+            <div class="card-slider-wrapper">
+                <div class="card-slider" id="sliderContainer">
+                    <!-- Slide 1 -->
+                    <div class="slide-content active">
+                        <img src="Kegiatan belajar mengajar di pelosok.jpg" alt="Akses Pendidikan 3T 1" class="slide-img">
+                        <div class="slide-overlay">
+                            <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Sorong, Papua Barat</p>
+                            <h3>Akses pendidikan di wilayah 3T</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="slide-content">
+                        <img src="Ruang kelas yang perlu perbaikan.jpg" alt="Akses Pendidikan 3T 2" class="slide-img">
+                        <div class="slide-overlay">
+                            <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Alor, Nusa Tenggara Timur</p>
+                            <h3>Kondisi fasilitas sekolah di daerah perbatasan</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="slide-content">
+                        <img src="Kegiatan belajar mengajar di sumbar.jpg" alt="Akses Pendidikan 3T 3" class="slide-img">
+                        <div class="slide-overlay">
+                            <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Mentawai, Sumatera Barat</p>
+                            <h3>Semangat belajar siswa di pelosok negeri</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tombol Navigasi Slider Kiri & Kanan -->
+                <button class="btn-slide-prev" id="prevSlide" aria-label="Sebelumnya">
+                    <img src="panah-kecil.svg" alt="Prev" class="arrow-icon prev-flip">
+                </button>
+                <button class="btn-slide-next" id="nextSlide" aria-label="Berikutnya">
+                    <img src="panah-kecil.svg" alt="Next" class="arrow-icon">
+                </button>
+            </div>
+
+            <!-- Dots Indicator -->
+            <div class="slider-dots" id="sliderDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+
+            <!-- CTA Button Utama -->
+            <button class="btn-hero-lapor" id="open-lapor-hero">
+                <img src="peringatan.svg" alt="Peringatan" class="btn-icon-svg">
+                <span>Laporkan Kerusakan</span>
+                <img src="panah-besar.svg" alt="Panah" class="btn-icon-svg">
+            </button>
+
+            <!-- Statistik -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h4>1.284</h4>
+                    <p>Laporan masuk</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h4>72%</h4>
+                    <p>Ditindaklanjuti</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h4>38</h4>
+                    <p>Kabupaten 3T</p>
+                </div>
+            </div>
         </div>
-        <div class="slide">
-          <img class="foto" src="Ruang kelas yang perlu perbaikan.jpg" alt="Ruang kelas yang perlu perbaikan">
-          <div class="loc"><img src="pin.svg" alt="">Kab. Asmat, Papua</div>
-          <div class="caption">Ruang kelas yang perlu perbaikan</div>
-        </div>
-        <div class="slide">
-          <img class="foto" src="" alt="Perjalanan siswa menuju sekolah">
-          <div class="loc"><img src="pin.svg" alt="">Kab. Natuna, Kepri</div>
-          <div class="caption">Perjalanan siswa menuju sekolah</div>
-        </div>
-        <button class="next" id="next" aria-label="Foto berikutnya">
-          <img src="pana-kecil.svg" alt="Tombol berikutnya">
-        </button>
-      </div>
-      <div class="dots" id="dots"></div>
- 
-      <button class="cta" id="report">
-        <img src="peringatan.svg" alt="Laporkan">
-        <span class="grow">Laporkan Kerusakan</span>
-        <img src="panah-besar.svg" alt="Tombol Panah">
-      </button>
- 
-      <div class="stats">
-        <div class="stat"><b data-count="1284">0</b><small>Laporan masuk</small></div>
-        <div class="stat"><b data-count="72" data-suffix="%">0</b><small>Ditindaklanjuti</small></div>
-        <div class="stat"><b data-count="38">0</b><small>Kabupaten 3T</small></div>
-      </div>
     </section>
-  </header>
- 
-  <!-- Formulir laporan -->
-  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="ttl">
-    <div class="sheet">
-      <h2 id="ttl">Laporkan kerusakan sekolah</h2>
-      <label for="school">Nama sekolah</label>
-      <input id="school" placeholder="Contoh: SDN 1 Alor Barat">
-      <label for="desc">Kondisi kerusakan</label>
-      <textarea id="desc" rows="3" placeholder="Jelaskan kerusakan yang terjadi"></textarea>
-      <div class="row">
-        <button class="btn-cancel" id="cancel">Batal</button>
-        <button class="btn-send" id="send">Kirim laporan</button>
-      </div>
+
+    <!-- Formulir Laporan (Modal Overlay) -->
+    <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="ttl">
+        <div class="sheet">
+            <h2 id="ttl">Laporkan kerusakan sekolah</h2>
+            <label for="school">Nama sekolah</label>
+            <input id="school" placeholder="Contoh: SDN 1 Alor Barat">
+            <label for="desc">Kondisi kerusakan</label>
+            <textarea id="desc" rows="3" placeholder="Jelaskan kerusakan yang terjadi"></textarea>
+            <div class="row">
+                <button class="btn-cancel" id="cancel">Batal</button>
+                <button class="btn-send" id="send">Kirim laporan</button>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="toast" id="toast">Laporan terkirim</div>
-        </section>
-    </header>
+    <div class="toast" id="toast">Laporan terkirim</div>
 
     <main>
         <!-- Data Anggaran -->
-        <section id="Data Anggaran">
-
+        <section id="Data-Anggaran">
         </section>
-        
              <!-- Langkah-Cara-Melapor&Button -->
         <section id="#Langkah-Cara-Melapor-dan-Button">
             <div class="Text-Pengantar">
@@ -147,7 +185,7 @@
 
 
             </div>
-
+            <script src="script.js"></script>
     
         </section>
     </main>

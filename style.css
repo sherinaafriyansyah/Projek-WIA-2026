@@ -42,6 +42,201 @@ a {
     text-decoration: none;
 }
 
+/*Hero Section*/
+.hero-section {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.badge {
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.hero-title span {
+    color: var(--orange);
+}
+
+.hero-desc {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Card Slider / Carousel di Hero Section */
+.card-slider-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.card-slider {
+    display: flex !important;
+    flex-direction: row !important;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+}
+
+.slide-content {
+    min-width: 100% !important;
+    width: 100% !important;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.slide-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(7, 19, 32, 0.9));
+}
+
+.slide-overlay .location {
+    font-size: 12px;
+    color: #cbd5e1;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.inline-icon {
+    width: 14px !important;
+    height: 14px !important;
+    object-fit: contain;
+}
+
+.slide-overlay h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-slide-prev,
+.btn-slide-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.btn-slide-prev { left: 10px; }
+.btn-slide-next { right: 10px; }
+
+.arrow-icon {
+    width: 14px !important;
+    height: 14px !important;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+/* Dots Indicator Slider */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.dot {
+    width: 16px;
+    height: 6px;
+    background-color: #162a40;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: width 0.3s;
+}
+
+.dot.active {
+    background-color: var(--orange);
+    width: 24px;
+}
+
+/* Tombol Utama "Laporkan Kerusakan" di Hero Section */
+.btn-hero-lapor {
+    width: 100%;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 145, 0, 0.3);
+    margin-bottom: 24px;
+}
+
+.btn-hero-lapor span {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.btn-hero-lapor .btn-icon-svg {
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain;
+}
+
+/* Statistik di Bawah Hero Section */
+.hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #162a40;
+}
+
+.stat-item h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.stat-item p {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 25px;
+    background-color: #162a40;
+}
 
 /* Langkah Melapor */
 #Langkah-Cara-Melapor-dan-Button {
