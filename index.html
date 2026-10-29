@@ -746,11 +746,61 @@
 
     </main>
 
+   <!-- Cek Status Laporan Section -->
+<section id="CekStatus" class="container">
+    
+    <!-- Main Heading -->
+    <h1 class="main-title">Sudah sampai mana?</h1>
+    
+    <!-- Description -->
+    <p class="description">
+        Masukkan kode unik yang Anda terima setelah mengirim laporan.
+    </p>
 
+    <!-- Form Section -->
+    <form class="status-form" onsubmit="event.preventDefault();">
+        <label for="kode-laporan" class="input-label">Kode laporan</label>
+        <input 
+            type="text" 
+            id="kode-laporan" 
+            class="text-input" 
+            value="PD-261020-0142" 
+            placeholder="Masukkan kode laporan"
+        >
+        
+        <button type="submit" class="btn-submit">
+            <span>Cek status laporan</span>
+            <!-- Ikon Cari diganti dengan img -->
+            <img src="Icon Search.png" alt="Icon Search" class="icon">
+        </button>
+    </form>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-container">
+    <!-- Result Card -->
+    <div class="result-card">
+        <div class="card-header">
+            <span class="badge-status">Diverifikasi</span>
+            <span class="simulation-tag">Data simulasi</span>
+        </div>
+
+        <h2 class="card-title">SMKN 1 Pandawai</h2>
+        
+        <p class="card-subinfo">
+            Sumba Timur, NTT 
+        </p>
+        <p class="card-issue">
+            Atap ruang kelas bocor
+        </p>
+
+        <p class="card-description">
+            Laporan lolos pemeriksaan awal. Verifikasi kondisi lapangan belum selesai.
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- Footer -->
+    <footer class="footer-3t">
         <div class="footer-brand">
             <img
                 src="images/logo.png"

@@ -120,3 +120,4 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSlider(currentIndex + 1);
     }, 4000);
 });
+
