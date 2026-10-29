@@ -8,23 +8,26 @@
 </head>
 
 <body>
-    <header>
-        <!-- Logo -->
-        <section id="Logo">
-            <img src="" alt="Logo">
-            <h4>PELITA</h4>
-            <p>Pelayanan Informasi & Pusat Aduan<p>
-        </section>
+<header class="navbar-section">
+    <div class="navbar-container">
+        <!-- Logo & Slogan -->
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="Logo PELITA" class="logo-img"> <!-- Ganti sesuai file logo kamu -->
+            <div class="logo-text">
+                <span class="brand-name">PELITA</span>
+                <span class="brand-desc">Pelayanan Informasi & Pusat Aduan</span>
+            </div>
+        </div>
 
-        <!-- Navigasi -->
-        <nav id="Navigasi">
-            <ul>
-                <li><a href="#Beranda"></a>Beranda</li>
-                <li><a href="#Data Anggaran"></a>Data Anggaran</li>
-                <li><a href="lapor.html"></a>Lapor!</li>
-                <li><a href="status.html"></a>Cek Status</li>
-            </ul>
-        </nav>
+        <!-- Menu Navigasi -->
+        <ul class="nav-menu">
+            <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+            <li><a href="#anggaran" class="nav-link">Data Anggaran</a></li>
+            <li><a href="#lapor" class="nav-link">Lapor!</a></li>
+            <li><a href="#status" class="nav-link">Cek Status</a></li>
+        </ul>
+    </div>
+</header>
 
 <!-- Hero Section -->
     <section id="Beranda" class="hero-section">
@@ -187,59 +190,63 @@
 
 
             </div>
-
-            <div id="Alur">
-                <!-- Step 1 -->
-                <div class="step">
-                    <div class="nomor">1</div>
-                    <div class="card">
-                        <div>
-                            <h2>Amati & Bandingkan</h2>
-                            <p>Lihat data anggaran dan kondisi sekolah.</p>
-                        </div>
-                        <span class="icon"></span>
-                    </div>
-                </div>
-                <!-- Step 2 -->
-                <div class="step">
-                    <div class="nomor">2</div>
-                    <div class="card">
-                        <div>
-                            <h2>Tulis Laporan</h2>
-                            <p>Laporan laporan jika keadaan nyata tidak sesuai dengan data anggaran dan lampirkan bukti.</p>
-                        </div>
-                        <span class="icon"></span>
-                    </div>
-                </div>
-                <!-- Step 3 -->
-                <div class="step">
-                    <div class="nomor">3</div>
-                    <div class="card">
-                        <div>
-                            <h2>Kirim Laporan</h2>
-                            <p>Klik Buton "Kirim Laporan" agar laporan anda benar-benar sampai.</p>
-                        </div>
-                        <span class="icon"></span>
-                    </div>
-                </div>
-                <!-- Step 4 -->
-                 <div class="step">
-                    <div class="nomor">4</div>
-                    <div class="card">
-                        <div>
-                            <h2>Pantau Progres</h2>
-                            <p>Gunakan kode laporan yang telah didapat setelah selesai melapor untuk melihat status laporan anda.</p>
-                        </div>
-                        <span class="icon"></span>
-                    </div>
-                </div>
-
-
-            </div>
             <script src="script.js"></script>
     
         </section>
     </main>
+
+   <!-- Cek Status Laporan Section -->
+<section id="CekStatus" class="container">
+    
+    <!-- Main Heading -->
+    <h1 class="main-title">Sudah sampai mana?</h1>
+    
+    <!-- Description -->
+    <p class="description">
+        Masukkan kode unik yang Anda terima setelah mengirim laporan.
+    </p>
+
+    <!-- Form Section -->
+    <form class="status-form" onsubmit="event.preventDefault();">
+        <label for="kode-laporan" class="input-label">Kode laporan</label>
+        <input 
+            type="text" 
+            id="kode-laporan" 
+            class="text-input" 
+            value="PD-261020-0142" 
+            placeholder="Masukkan kode laporan"
+        >
+        
+        <button type="submit" class="btn-submit">
+            <span>Cek status laporan</span>
+            <!-- Ikon Cari diganti dengan img -->
+            <img src="Icon Search.png" alt="Icon Search" class="icon">
+        </button>
+    </form>
+
+    <!-- Result Card -->
+    <div class="result-card">
+        <div class="card-header">
+            <span class="badge-status">Diverifikasi</span>
+            <span class="simulation-tag">Data simulasi</span>
+        </div>
+
+        <h2 class="card-title">SMKN 1 Pandawai</h2>
+        
+        <p class="card-subinfo">
+            Sumba Timur, NTT 
+        </p>
+        <p class="card-issue">
+            Atap ruang kelas bocor
+        </p>
+
+        <p class="card-description">
+            Laporan lolos pemeriksaan awal. Verifikasi kondisi lapangan belum selesai.
+        </p>
+
+    </div>
+
+</section>
 
     <!-- Footer -->
     <footer class="footer-3t">
