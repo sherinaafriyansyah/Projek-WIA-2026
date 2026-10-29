@@ -5,30 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PELITA</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="script-form.js">
 </head>
 
 <body>
-<header class="navbar-section">
-    <div class="navbar-container">
-        <!-- Logo & Slogan -->
-        <div class="logo-wrapper">
-            <img src="logo.png" alt="Logo PELITA" class="logo-img"> <!-- Ganti sesuai file logo kamu -->
-            <div class="logo-text">
-                <span class="brand-name">PELITA</span>
-                <span class="brand-desc">Pelayanan Informasi & Pusat Aduan</span>
-            </div>
-        </div>
+    <!-- Logo -->
+    <article id="Navigasi-bar">
+            <section id="Logo">
+                 <img src="" alt="Logo">
+                 <h4>PELITA <br><span>Pelayanan Informasi & Pusat Aduan</span></h4>
+            </section>
+        <!-- <div class="border"></div> -->
+        <!-- Navigasi -->
+        <nav id="Navigasi">
+            <ul>
+                <li><a href="#Beranda">Beranda</a></li>
+                <li><a href="#Data-Anggaran">Data Anggaran</a></li>
+                <li><a href="lapor.html">Lapor!</a></li>
+                <li><a href="status.html">Cek Status</a></li>
+            </ul>
+        </nav>
+    </article>
 
-        <!-- Menu Navigasi -->
-        <ul class="nav-menu">
-            <li><a href="#beranda" class="nav-link active">Beranda</a></li>
-            <li><a href="#anggaran" class="nav-link">Data Anggaran</a></li>
-            <li><a href="#lapor" class="nav-link">Lapor!</a></li>
-            <li><a href="#status" class="nav-link">Cek Status</a></li>
-        </ul>
-    </div>
-</header>
-
+    <!-- Header -->
+    <header>
+        <!-- Hero Section -->
+         <section id="Beranda">
+        <section id="Hero-Section">
+           <p class="hero-tagline">
+            TRANSPARANSI UNTUK DAERAH 3T
+           </p> 
 <!-- Hero Section -->
     <section id="Beranda" class="hero-section">
         <div class="hero-container">
@@ -46,7 +53,7 @@
                 <div class="card-slider" id="sliderContainer">
                     <!-- Slide 1 -->
                     <div class="slide-content active">
-                        <img src="Kegiatan belajar mengajar di pelosok.jpg" alt="Akses Pendidikan 3T 1" class="slide-img">
+                        <img src="aset/Kegiatan belajar mengajar di pelosok.jpg" alt="Akses Pendidikan 3T 1" class="slide-img">
                         <div class="slide-overlay">
                             <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Sorong, Papua Barat</p>
                             <h3>Akses pendidikan di wilayah 3T</h3>
@@ -54,15 +61,15 @@
                     </div>
                     <!-- Slide 2 -->
                     <div class="slide-content">
-                        <img src="Ruang kelas yang perlu perbaikan.jpg" alt="Akses Pendidikan 3T 2" class="slide-img">
+                        <img src="aset/Ruang kelas yang perlu perbaikan.jpg" alt="Akses Pendidikan 3T 2" class="slide-img">
                         <div class="slide-overlay">
-                            <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Alor, Nusa Tenggara Timur</p>
+                            <p class="location"><img src="aset/pin.svg" alt="Pin" class="inline-icon"> Kab. Alor, Nusa Tenggara Timur</p>
                             <h3>Kondisi fasilitas sekolah di daerah perbatasan</h3>
                         </div>
                     </div>
                     <!-- Slide 3 -->
                     <div class="slide-content">
-                        <img src="Kegiatan belajar mengajar di sumbar.jpg" alt="Akses Pendidikan 3T 3" class="slide-img">
+                        <img src="aset/Kegiatan belajar mengajar di sumbar.jpg" alt="Akses Pendidikan 3T 3" class="slide-img">
                         <div class="slide-overlay">
                             <p class="location"><img src="pin.svg" alt="Pin" class="inline-icon"> Kab. Mentawai, Sumatera Barat</p>
                             <h3>Semangat belajar siswa di pelosok negeri</h3>
@@ -70,12 +77,26 @@
                     </div>
                 </div>
 
+
+           <p class="hero-description">
+            Pantau alokasi anggaran dan laporkan kondisi sekolah <br />
+            demi pendidikan yang merata hingga pelosok negeri
+           p>
+           
+           <div id="carousel" class="carousel-container">
+            <div id="slider-track"></div>
+            <div>
+        </section>
+        </section>
+    </header>
+
+
                 <!-- Tombol Navigasi Slider Kiri & Kanan -->
                 <button class="btn-slide-prev" id="prevSlide" aria-label="Sebelumnya">
-                    <img src="panah-kecil.svg" alt="Prev" class="arrow-icon prev-flip">
+                    <img src="aset/panah-kecil.svg" alt="Prev" class="arrow-icon prev-flip">
                 </button>
                 <button class="btn-slide-next" id="nextSlide" aria-label="Berikutnya">
-                    <img src="panah-kecil.svg" alt="Next" class="arrow-icon">
+                    <img src="aset/panah-kecil.svg" alt="Next" class="arrow-icon">
                 </button>
             </div>
 
@@ -88,10 +109,11 @@
 
             <!-- CTA Button Utama -->
             <button class="btn-hero-lapor" id="open-lapor-hero">
-                <img src="peringatan.svg" alt="Peringatan" class="btn-icon-svg">
+                <img src="aset/peringatan.svg" alt="Peringatan" class="btn-icon-svg">
                 <span>Laporkan Kerusakan</span>
-                <img src="panah-besar.svg" alt="Panah" class="btn-icon-svg">
+                <img src="aset/panah-besar.svg" alt="Panah" class="btn-icon-svg">
             </button>
+
 
             <!-- Statistik -->
             <div class="hero-stats">
@@ -112,6 +134,7 @@
             </div>
         </div>
     </section>
+    </section>
 
     <!-- Formulir Laporan (Modal Overlay) -->
     <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="ttl">
@@ -129,13 +152,467 @@
     </div>
     <div class="toast" id="toast">Laporan terkirim</div>
 
+    <script src="script.js"></script>
+
     <main>
         <!-- Data Anggaran -->
         <section id="Data-Anggaran">
+            <!-- Data Anggaran -->
+ <div class="app">
+
+    <!-- Header Data Anggaran -->
+    <header>
+        <p class="eyebrow">Kenali Anggaran Daerah</p>
+
+        <h1>
+            Dana pendidikan,<br>
+            lebih mudah dipahami.
+        </h1>
+
+        <p class="intro">
+            Pilih wilayah untuk melihat alokasi dan realisasi keuangan pendidikan.
+        </p>
+    </header>
+
+
+    <!-- Pilihan Wilayah dan Filter -->
+    <section aria-label="Pilih wilayah dan filter">
+
+        <label class="field-label" for="region">
+            Cari kabupaten di daerah 3T
+        </label>
+
+        <div class="region-wrap">
+
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle
+                    cx="10.8"
+                    cy="10.8"
+                    r="7.2"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                />
+                <path
+                    d="m16.2 16.2 4.1 4.1"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                />
+            </svg>
+
+            <select class="region-select" id="region">
+                <option value="sumba">Sumba Timur, NTT</option>
+                <option value="sabu">Sabu Raijua, NTT</option>
+                <option value="rote">Rote Ndao, NTT</option>
+                <option value="alor">Alor, NTT</option>
+                <option value="belu">Belu, NTT</option>
+            </select>
+
+            <span class="chevron" aria-hidden="true"></span>
+
+        </div>
+
+
+        <!-- buat filter -->
+        <div class="filters">
+
+            <label class="sr-only" for="year">
+                Tahun anggaran
+            </label>
+
+            <select class="filter-select" id="year">
+                <option value="2026">Tahun 2026</option>
+                <option value="2025">Tahun 2025</option>
+                <option value="2024">Tahun 2024</option>
+            </select>
+
+
+            <label class="sr-only" for="level">
+                Jenjang pendidikan
+            </label>
+
+            <select class="filter-select" id="level">
+                <option value="all">SD &amp; SMP</option>
+                <option value="sd">SD</option>
+                <option value="smp">SMP</option>
+            </select>
+
+
+            <span class="data-badge">
+                Data simulasi
+            </span>
+
+        </div>
+
+
+        <!-- button -->
+        <button
+            class="primary-button"
+            id="showBudget"
+            type="button"
+        >
+            Lihat anggaran wilayah
+
+            <svg
+                class="button-search"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+            >
+                <circle
+                    cx="10.8"
+                    cy="10.8"
+                    r="7.2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                />
+
+                <path
+                    d="m16.2 16.2 4.1 4.1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+            </svg>
+        </button>
+
+    </section>
+
+
+    <!-- info wilayah -->
+    <section aria-labelledby="regionTitle">
+
+        <div class="region-heading">
+
+            <h2 id="regionTitle">
+                Kabupaten Sumba Timur
+            </h2>
+
+            <svg
+                class="map-pin"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+            >
+                <path
+                    d="M19.5 10.2c0 5.2-7.5 11-7.5 11s-7.5-5.8-7.5-11a7.5 7.5 0 1 1 15 0Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                />
+
+                <circle
+                    cx="12"
+                    cy="9.8"
+                    r="2.3"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                />
+
+                <path
+                    d="m4.5 18.5 4.1-2.7 3.3 1.5 4.2-2.5 3.4 1.2"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </div>
+
+
+        <p class="period" id="periodText">
+            Januari–September 2026 • 24 sekolah contoh
+        </p>
+
+
+        <!-- ringkasan anggaran -->
+        <div class="summary-grid">
+
+            <article class="summary-card total">
+
+                <p class="summary-label">
+                    Total anggaran 2026
+                </p>
+
+                <p class="amount" id="budgetTotal">
+                    Rp12,0 M
+                </p>
+
+                <p class="summary-note">
+                    Alokasi satu tahun
+                </p>
+
+            </article>
+
+
+            <article class="summary-card">
+
+                <p class="summary-label">
+                    Realisasi s.d. Sep
+                </p>
+
+                <p class="amount" id="realizedTotal">
+                    Rp8,4 M
+                </p>
+
+                <p
+                    class="summary-note realization-note"
+                    id="realizedPercent"
+                >
+                    70% dari anggaran
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- grafik anggaran -->
+    <section
+        class="chart-card"
+        aria-labelledby="chartTitle"
+    >
+
+        <h2 id="chartTitle">
+            Anggaran vs realisasi keuangan
+        </h2>
+
+        <p
+            class="chart-subtitle"
+            id="chartRegion">
+            Sumba Timur • Tahun anggaran 2026
+        </p>
+
+        <p class="chart-subtitle">
+            Realisasi s.d. September • Satuan: Rp miliar (M)
+        </p>
+
+
+        <!-- Legenda -->
+        <div
+            class="legend"
+            aria-label="Legenda grafik">
+
+            <span class="legend-item">
+                <span class="legend-swatch swatch-navy"></span>
+                Anggaran
+            </span>
+
+            <span class="legend-item">
+                <span class="legend-swatch swatch-orange"></span>
+                Realisasi keuangan
+            </span>
+        </div>
+
+
+        <!-- rehabilitasi sekolah -->
+        <div class="chart-row">
+            <p class="category">
+                Rehabilitasi sekolah
+            </p>
+
+            <div class="bar-line">
+                <div class="bar-track">
+                    <div
+                        class="bar budget"
+                        id="rehabBudgetBar"
+                        style="width:100%"
+                    ></div>
+                </div>
+
+                <span
+                    class="bar-value"
+                    id="rehabBudgetValue">
+                    6,0
+                </span>
+            </div>
+
+
+            <div class="bar-line">
+                <div class="bar-track">
+                    <div
+                        class="bar realized"
+                        id="rehabRealBar"
+                        style="width:70%">
+                    </div>
+                </div>
+
+                <span
+                    class="bar-value"
+                    id="rehabRealValue">
+                    4,2
+                </span>
+            </div>
+        </div>
+
+
+        <!-- sarana belajar -->
+        <div class="chart-row">  
+            <p class="category">
+                Sarana belajar
+            </p>
+
+            <div class="bar-line">
+
+                <div class="bar-track">
+                    <div
+                        class="bar budget"
+                        id="suppliesBudgetBar"
+                        style="width:60%"
+                    ></div>
+                </div>
+
+                <span
+                    class="bar-value"
+                    id="suppliesBudgetValue"
+                >
+                    3,6
+                </span>
+
+            </div>
+
+
+            <div class="bar-line">
+
+                <div class="bar-track">
+                    <div
+                        class="bar realized"
+                        id="suppliesRealBar"
+                        style="width:46.67%"
+                    ></div>
+                </div>
+
+                <span
+                    class="bar-value"
+                    id="suppliesRealValue"
+                >
+                    2,8
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Dukungan Operasional -->
+        <div class="chart-row">
+
+            <p class="category">
+                Dukungan operasional
+            </p>
+
+            <div class="bar-line">
+
+                <div class="bar-track">
+                    <div
+                        class="bar budget"
+                        id="opsBudgetBar"
+                        style="width:40%"
+                    ></div>
+                </div>
+
+                <span
+                    class="bar-value"
+                    id="opsBudgetValue"
+                >
+                    2,4
+                </span>
+
+            </div>
+
+
+            <div class="bar-line">
+
+                <div class="bar-track">
+                    <div
+                        class="bar realized"
+                        id="opsRealBar"
+                        style="width:23.33%"
+                    ></div>
+                </div>
+
+                <span
+                    class="bar-value"
+                    id="opsRealValue"
+                >
+                    1,4
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Skala Grafik -->
+        <div
+            class="axis"
+            aria-hidden="true"
+        >
+            <span>0</span>
+            <span>2</span>
+            <span>4</span>
+            <span>6</span>
+        </div>
+
+
+        <!-- Sumber -->
+        <p class="source">
+            Sumber: dataset demonstrasi PELITA.<br>
+            Pembaruan Data: 20 Oktober 2026.
+            Bukan data resmi (Data Dummy).
+        </p>
+
+    </section>
+
+
+    <!-- Catatan -->
+    <aside class="notice">
+
+        <svg
+            class="notice-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+        >
+            <circle
+                cx="12"
+                cy="12"
+                r="9.2"
+                stroke="currentColor"
+                stroke-width="1.7"
+            />
+
+            <path
+                d="M12 10.5v5.1"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+            />
+
+            <circle
+                cx="12"
+                cy="7.5"
+                r="1"
+                fill="currentColor"
+            />
+        </svg>
+
+
+        <p>
+            Kondisi fisik sekolah tidak bisa diukur hanya dari
+            realisasi keuangannya. Temuan masyarakat masih perlu
+            diverifikasi sebelum menjadi kesimpulan.
+        </p>
+
+    </aside>
+
+</div>
         </section>
 
         <!-- Langkah-Cara-Melapor&Button -->
-        <section id="#Langkah-Cara-Melapor-dan-Button">
+        <section id="Langkah-Cara-Melapor-dan-Button">
+            <article class="Cara-Melapor">
             <div class="Text-Pengantar">
                 <h6>MUDAH & TERPANTAU</h6>
                 <h2>Empat langkah untuk perubahan</h2>
@@ -149,11 +626,11 @@
                     <div class="card">
                         <div>
                             <h2>Amati & Bandingkan</h2>
-                            <p>Lihat data anggaran dan kondisi sekolah.</p>
+                            <p>Cari wilayah melalui fitur search dan lihat data anggaran dan kondisi sekolah melalui grafik data.</p>
                         </div>
-                        <span class="icon"></span>
+                        <span class="icon">→</span>
                     </div>
-                </div>
+                </div> <br>
                 <!-- Step 2 -->
                 <div class="step">
                     <div class="nomor">2</div>
@@ -162,9 +639,9 @@
                             <h2>Tulis Laporan</h2>
                             <p>Laporan laporan jika keadaan nyata tidak sesuai dengan data anggaran dan lampirkan bukti.</p>
                         </div>
-                        <span class="icon"></span>
+                        <span class="icon">→</span>
                     </div>
-                </div>
+                </div> <br>
                 <!-- Step 3 -->
                 <div class="step">
                     <div class="nomor">3</div>
@@ -173,9 +650,9 @@
                             <h2>Kirim Laporan</h2>
                             <p>Klik Buton "Kirim Laporan" agar laporan anda benar-benar sampai.</p>
                         </div>
-                        <span class="icon"></span>
+                        <span class="icon">→</span>
                     </div>
-                </div>
+                </div> <br>
                 <!-- Step 4 -->
                  <div class="step">
                     <div class="nomor">4</div>
@@ -184,15 +661,89 @@
                             <h2>Pantau Progres</h2>
                             <p>Gunakan kode laporan yang telah didapat setelah selesai melapor untuk melihat status laporan anda.</p>
                         </div>
-                        <span class="icon"></span>
+                        <span class="icon">✓</span>
                     </div>
                 </div>
-
-
             </div>
-            <script src="script.js"></script>
-    
+            </article>
+            <button class="tombol" id="bukaForm" type="button">
+                 Mulai Melapor!
+                <span>→</span>
+            </button>
         </section>
+
+    <!-- Modal Form Pelaporan -->
+        <div class="overlay-hamparan" id="modalLaporan" hidden>
+
+             <div class="modal">
+                <button class="tutup-modal" id="tutupForm" type="button">
+                    &times;
+                </button>
+                
+                <p class="label-form">FORM PELAPORAN</p>
+                <h2>Laporkan Kerusakan</h2>
+
+                <!-- Form Laporan -->
+                <form id="formLaporan">
+                    <!-- Label Laporan Kerusakan -->
+                    <label for="namaSekolah">Nama sekolah</label>
+                    <input
+                    type="text"
+                    id="namaSekolah"
+                    name="namaSekolah"
+                    placeholder="Contoh: SD Negeri 4 Alor"
+                    required
+                    >
+                    
+                    <!-- Label Jenis Kerusakan -->
+                    <label for="jenisKerusakan">Jenis kerusakan</label>
+                    <select id="jenisKerusakan" name="jenisKerusakan" required>
+                        <option value="">Pilih jenis kerusakan</option>
+                        <option value="Ruang kelas">Ruang kelas</option>
+                        <option value="Toilet">Toilet</option>
+                        <option value="Perpustakaan">Perpustakaan</option>
+                        <option value="Laboratorium">Laboratorium</option>
+                        <option value="Fasilitas lainnya">Fasilitas lainnya</option>
+                    </select>
+                    
+                    <label for="lokasiSekolah">Lokasi sekolah</label>
+                    <input
+                    type="text"
+                    id="lokasiSekolah"
+                    name="lokasiSekolah"
+                    placeholder="Kabupaten, Provinsi"
+                    required
+                    >
+                    
+                    <!-- Label Deskripsi Laporan -->
+                    <label for="deskripsi">Deskripsi singkat</label>
+                    <textarea
+                    id="deskripsi"
+                    name="deskripsi"
+                    placeholder="Ceritakan kondisi sarana yang perlu ditindaklanjuti..."
+                    rows="4"
+                    required>
+                    </textarea>
+                    
+                    <!-- Label Bukti Foto Laporan -->
+                    <label for="fotoBukti" class="upload-foto">
+                        Tambahkan foto sebagai bukti laporan
+                        <span>Disarankan!</span>
+                    </label>
+                    <input
+                    type="file"
+                    id="fotoBukti"
+                    name="fotoBukti"
+                    accept="image/*"
+                    >
+                    
+                <button type="submit" class="kirim-laporan">
+                    Kirim Laporan <span>→</span>
+                </button>
+    </form>
+  </div>
+</div>
+
     </main>
 
    <!-- Cek Status Laporan Section -->
@@ -252,18 +803,65 @@
     <footer class="footer-3t">
         <div class="footer-brand">
             <img
-            scr="#"
-            alt="Logo Transparasi 3T"
-            class="footer-logo">
-            
-           <div class="footer-brand-text">
-            <h2>Transparasi</h2>
-            <span>3T</span>
-           </div>
+                src="images/logo.png"
+                alt="Logo Transparansi 3T"
+                class="footer-logo">
+
+            <div class="brand-text">
+                <h2>Transparansi</h2>
+                <span>3 T</span>
+            </div>
         </div>
 
-    </footer>
+        <p class="footer-description">
+            Menjembatani suara warga dengan pengelola pendidikan untuk masa depan daerah 3T.
+        </p>
 
+        <div class="footer-contact">
+            <p class="contact-heading">BUTUH BANTUAN?</p>
 
+            <div class="contact-items">
+                <a href="tel:1500567" class="contact-item">
+                    <img
+                        src="images/telepon.png"
+                        alt="Ikon telepon">
+                    <span>1500 567</span>
+                </a>
+
+                <a
+                    href="mailto:halo@transparansi3t.id"
+                    class="contact-item">
+                    <img
+                        src="images/email.png"
+                        alt="Ikon email">
+                    <span>halo@transparansi3t.id</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="kebijakan-privasi.html">
+                Kebijakan Privasi
+            </a>
+
+            <span class="link-separator">-</span>
+
+            <a href="syarat-ketentuan.html">
+                Syarat &amp; Ketentuan
+            </a>
+        </div>
+
+        <!-- buat pemisahny -->
+        <div class="footer-divider"></div>
+
+        <p class="footer-copyright">
+            &copy; 2026 Transparansi 3T. Hak cipta dilindungi.
+        </p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="script-form.js"></script>
+<script src="data-anggaran.js"></script>
 </body>
 </html>
