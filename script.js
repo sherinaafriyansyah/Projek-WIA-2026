@@ -648,7 +648,6 @@ renderRegion(currentRegion);
 
 
 // Step & Form Laporan
-
 /* MENGAMBIL ELEMEN HTML */
 // Tombol untuk membuka form
 const openReportButton = document.getElementById("open-report");
@@ -975,7 +974,6 @@ backHomeButton.addEventListener("click", function () {
 
 
 /* DASAR FITUR CEK STATUS LAPORAN */
-
 // Contoh mengambil laporan berdasarkan kode: //
 // const reports = getSavedReports(); //
 // const kodeYangDicari = "3T-2026-1234567"; //
@@ -995,7 +993,7 @@ backHomeButton.addEventListener("click", function () {
 // Data berasal dari From Laporan yang disimpan di Supabase
 const dataContoh = [
     {
-        kode: "3T-2025-1842",
+        kode: "3T-2026-1842",
         judul: "Kerusakan atap ruang kelas",
         lokasi: "SD Negeri 4 Alor · Nusa Tenggara Timur",
         status: "diproses",
