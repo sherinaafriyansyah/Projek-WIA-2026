@@ -1187,3 +1187,6 @@ loginForm.addEventListener("submit", function (event) {
     message.textContent =
         "Autentikasi admin belum dihubungkan.";
 });
+
+//BUAT DASHBOARD ADMIN
+window.location.href = "dashboard-admin.html";
