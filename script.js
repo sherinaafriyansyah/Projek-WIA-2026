@@ -1174,3 +1174,16 @@ document.addEventListener("keydown", function(event) {
         tutupModal();
     }
 });
+
+// LOGIN ADMIN
+const loginForm = document.getElementById("loginAdminForm");
+
+// Proses submit login sementara
+loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const message = document.getElementById("loginMessage");
+
+    message.textContent =
+        "Autentikasi admin belum dihubungkan.";
+});

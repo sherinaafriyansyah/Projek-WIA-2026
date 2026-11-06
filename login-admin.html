@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin | PELITA</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+    <section id="loginPage">
+
+        <div class="login-card">
+
+            <a href="index.html" class="login-logo">
+                <img src="aset/logo PELITA.jpeg" alt="Logo PELITA">
+                <span>PELITA</span>
+            </a>
+
+            <div class="login-heading">
+                <p class="login-eyebrow">ADMINISTRATOR</p>
+                <h1>Selamat Datang!</h1>
+                <p>Silakan masuk untuk mengakses dashboard admin PELITA.</p>
+            </div>
+
+            <form id="loginAdminForm">
+
+                <div class="login-input-group">
+                    <label for="adminUsername">Username</label>
+                    <input
+                        type="text"
+                        id="adminUsername"
+                        placeholder="Masukkan username"
+                        required
+                    >
+                </div>
+
+                <div class="login-input-group">
+                    <label for="adminPassword">Password</label>
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        placeholder="Masukkan password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="login-submit">
+                    Masuk ke Dashboard →
+                </button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+            <a href="index.html" class="back-home">
+                ← Kembali ke Beranda
+            </a>
+
+        </div>
+
+    </section>
+
+    <script src="login-admin.js"></script>
+</body>
+</html>

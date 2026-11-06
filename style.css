@@ -2944,3 +2944,147 @@ button {
         font-size: 13px;
     }
 }
+
+/*LOGIN ADMIN*/
+#loginPage {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    background: #0c1a2b;
+    box-sizing: border-box;
+}
+
+#loginPage .login-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background: #ffffff;
+    color: #0a2947;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+#loginPage .login-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+    text-decoration: none;
+    color: #0a2947;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+#loginPage .login-logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+#loginPage .login-heading {
+    margin-bottom: 25px;
+}
+
+#loginPage .login-eyebrow {
+    color: #ff9100;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+#loginPage .login-heading h1 {
+    font-size: 30px;
+    color: #0a2947;
+    margin-bottom: 8px;
+}
+
+#loginPage .login-heading p:last-child {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+#loginPage .login-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+#loginPage .login-input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a2947;
+}
+
+#loginPage .login-input-group input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#loginPage .login-input-group input:focus {
+    border-color: #ff9100;
+    box-shadow: 0 0 0 3px rgba(255, 145, 0, 0.15);
+}
+
+#loginPage .login-submit {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #ff9100;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#loginPage .login-submit:hover {
+    background: #e68100;
+    transform: translateY(-2px);
+}
+
+#loginPage #loginMessage {
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+}
+
+#loginPage .back-home {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    color: #0a2947;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#loginPage .back-home:hover {
+    color: #ff9100;
+}
+
+@media (max-width: 480px) {
+    #loginPage .login-card {
+        padding: 28px 22px;
+    }
+
+    #loginPage .login-heading h1 {
+        font-size: 25px;
+    }
+}
